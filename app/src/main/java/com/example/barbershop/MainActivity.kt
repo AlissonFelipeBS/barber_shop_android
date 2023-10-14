@@ -9,8 +9,6 @@ import android.view.View
 import com.example.barbershop.databinding.ActivityMainBinding
 import com.example.barbershop.view.Home
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
@@ -59,14 +57,4 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("nome", nome)
         startActivity(intent)
     }
-
-    private fun coneccao(){
-        // Write a message to the database
-        val database = Firebase.database
-        val myRef = database.getReference("message")
-
-        myRef.setValue("Hello, World!")
-
-    }
 }
-
